@@ -1,0 +1,237 @@
+:root {
+    --Ldark-blue: #356EA9;
+    --Mdark-blue: #0A3871;
+    --Mgrey: #343A40;
+    --Lgrey: #495057;
+    --Little-blue: #F3F5FC;
+    --White: #FFFFFF;
+}
+
+body {
+    background-color: var(--Little-blue);
+    font-family: 'Inter', sans-serif;
+}
+
+.cabecalho {
+    display: flex;
+    padding-bottom: 120px;
+}
+
+.cabecalho img {
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    bottom: 80px;
+}
+
+.textoCodificador {
+    background-color: var(--Little-blue);
+    width: 322px;
+    height: auto;
+    padding: 0 16px 0 16px;
+    border: 0;
+    outline: 0;
+    font-size: 2rem;
+    color: var(--Mdark-blue);
+    resize: none;
+}
+
+.textoCodificador::placeholder {
+    color: var(--Mdark-blue);
+    font-size: 2rem;
+    font-family: 'Inter';
+}
+
+.aviso {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 64px 16px 16px;
+}
+
+.aviso__texto {
+    font-size: 0.9rem;
+}
+
+.btn-criptografar,
+.btn-descriptografar {
+    border-radius: 24px;
+    padding: 24px;
+    width: 343px;
+    height: 67px;
+    border: solid;
+    font-size: 1rem;
+    margin: 16px;
+    cursor: pointer;
+}
+
+.btn-criptografar {
+    background-color: var(--Mdark-blue);
+    color: var(--White);
+}
+
+.btn-descriptografar {
+    background-color: transparent;
+    border-color: var(--Mdark-blue);
+    color: var(--Mdark-blue);
+    margin-bottom: 48px;
+}
+
+.campoMensagem__imagem {
+    display: none;
+}
+
+.campoMensagem {
+    background-color: var(--White);
+    border-radius: 32px;
+    border: none;
+    padding: 32px;
+    text-align: center;
+    margin-left: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+}
+
+.campoMensagem__titulo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--Mgrey);
+    padding-bottom: 16px;
+}
+
+.campoMensagem__mensagem {
+    color: var(--Lgrey);
+}
+
+.textoCopiar {
+    width: 279px;
+    font-size: 1.5rem;
+    color: var(--Lgrey);
+    border: 0;
+    outline: 0;
+    margin-bottom: 32px;
+}
+
+.btn-copiar {
+    background-color: transparent;
+    border-style: solid;
+    border-radius: 24px;
+    border-color: var(--Mdark-blue);
+    width: 279px;
+    height: 67px;
+    padding: 24px;
+    color: var(--Mdark-blue);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.rodape {
+    margin: 50px 24px 32px;
+    color: rgb(162, 0, 255);
+}
+
+@media screen and (min-width: 768px) {
+
+    .grid {
+        position: absolute;
+        top: 40px;
+        left: 30px;
+    }
+
+    .cabecalho {
+        margin-bottom: 40px;
+    }
+
+    .textoCodificador {
+        width: 688px;
+        height: 300px;
+    }
+
+    .aviso {
+        padding-top: 0;
+    }
+
+    .botoes {
+        display: flex;
+    }
+
+    .btn-criptografar, .btn-descriptografar {
+        width: 332px;
+        height: 67px;
+    }
+
+    .campoMensagem {
+        width: 615px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .grid {
+        display: grid;
+        position: absolute;
+        top: 40px;
+        left: 30px;
+    }
+
+    .grid-template-area {
+        grid-template-columns: 100px 500px 350px;
+        grid-template-rows: 173px 350px 190px;
+        grid-template-areas:
+            "cabecalho cabecalho mensagem"
+            "none textArea mensagem"
+            "none funcoes mensagem"
+        ;
+    }
+
+    .cabecalho {
+        grid-area: cabecalho;
+        order: 1;
+    }
+
+    .digitador {
+        grid-area: textArea;
+        order: 2;
+    }
+
+    .textoCodificador {
+        width: 450px;
+        padding-bottom: 635px;
+    }
+
+    .funcoes {
+        grid-area: funcoes;
+        order: 4;
+    }
+
+    .campoMensagem {
+        width: auto;
+        grid-area: mensagem;
+        order: 3;
+    }
+
+    .campoMensagem__imagem {
+        display: block;
+        width: 300px;
+    }
+
+    .btn-criptografar,
+    .btn-descriptografar {
+        width: 328px;
+    }
+}
+
+@media screen and (min-width: 1293px) {
+    .grid-template-area {
+        grid-template-columns: 200px 700px 300px;
+        grid-template-rows: 100px 400px 180px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .grid-template-area {
+        grid-template-columns: 100px 800px 400px;
+    }
+}

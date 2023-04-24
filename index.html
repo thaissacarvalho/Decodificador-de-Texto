@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/logo.svg" type="image/x-icon">
+    <title>Segredinho Challenge</title>
+</head>
+<body>
+    <main class="grid grid-template-area">
+        <header class="cabecalho">
+            <img src="assets/images/logo.svg" alt="logo da Alura">
+        </header>
+            <div class="digitador">
+                <textarea class="textoCodificador" id="texto__mensagem" placeholder="Digite seu texto"></textarea>
+            </div>
+
+            <div class="funcoes">
+                <div class="aviso">
+                    <img class="aviso__imagem" src="assets/images/exclamacao.svg" alt="Simbolo de exclamação">
+                    <p class="aviso__texto">Apenas letras maiusculas e sem acento!</p>
+                </div>
+                <div class="botoes">
+                    <button onclick="criptografar()" class="btn-criptografar">Criptografar</button>
+                    <button onclick="descriptografar()" class="btn-descriptografar">Descriptografar</button>
+                </div>
+            </div>
+
+            <div class="campoMensagem" id="mensagem">
+                <img src="assets/images/pessoa.svg" alt="Pessoa investigando um diamante com a lupa." class="campoMensagem__imagem">
+                <h2 class="campoMensagem__titulo">Nenhuma mensagem encontrada</h2>
+                <span class="campoMensagem__mensagem">Digite um texto que você deseja criptografar ou
+                    descriptografar.</span>
+            </div>
+    </main>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
